@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zirva Jewels</title>
+    <link rel="icon" href="file:///C:/Users/sahas/Downloads/IMG-20250111-WA0004.ico" type="image/x-icon">
+    <!-- Include Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #977b0a;
+        }
+        header {
+            background: #9ac770e4;
+            color: #fff;
+            padding: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        header .logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 5px;
+        }
+        header .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        header nav a:hover {
+            color: #d48e3a;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 0px;
+            background: url('C:\\Users\\sahas\\Downloads\\output (3).jpg') no-repeat center center/cover;
+            background-size: cover;
+            color: #ffffff;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .hero button {
+            background: #a00749;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .hero button:hover {
+            background: #d48e3a;
+        }
+        .ad-banner {
+            text-align: center;
+            background: #ffeb3b;
+            color: #000;
+            padding: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            height: 30px;
+        }
+        .ad-banner span {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollText 10s linear infinite;
+            position: absolute;
+        }
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .collection {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+        .collection h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+        .product {
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .product img:hover {
+            transform: scale(1.05);
+        }
+        .product p {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product span {
+            text-decoration: line-through;
+            color: gray;
+            margin-left: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #444;
+            color: #e1c005;
+            margin-top: 40px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer .social-media {
+            margin: 20px 0;
+        }
+        footer .social-media a {
+            color: #e1c005;
+            margin: 0 15px;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        footer .social-media a:hover {
+            color: #d48e3a;
+            transform: scale(1.2);
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer .contact {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\\Users\\sahas\\Downloads\\IMG-20250111-WA0004.jpg" alt="Zirva Jewels Logo">
+            <span>Zirva Jewels</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#catalog">Catalog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Zirva Jewels</h1>
+        <p>Discover timeless elegance and unmatched craftsmanship.</p>
+        <button>Explore Collection</button>
+    </section>
+    <div class="ad-banner">
+        <span>Limited Time Offer: Get 30% Off on Our Exclusive Collection!</span>
+    </div>
+
+
+    <!-- Our Collection Section -->
+    <section class="collection" id="catalog">
+        <h2>Our Collection</h2>
+        <div class="products">
+            <!-- Example Product -->
+            <div class="product">
+                <img src="C:\\Users\\sahas\\Downloads\\IMG_7200.JPG" alt="Product 1" onclick="openImage('C:\\Users\\sahas\\Downloads\\IMG_7200.JPG')">
+                <p><b>Line Stud</b></p>
+                <p><b>₹149 <span>₹212</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\\Users\\sahas\\Downloads\\IMG_7197.JPG" alt="Product 2" onclick="openImage('C:\\Users\\sahas\\Downloads\\IMG_7197.JPG')">
+                <p><b>Double Layer Chain</b></p>
+                <p><b>₹299 <span>₹427</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7203.JPG" alt="Product 3" onclick="openImage('C:\Users\sahas\Downloads\IMG_7203.JPG')">
+                <p><b>Pearl Drop Earings </p>₹129 <span style="text-decoration: line-through; color: gray;">₹184</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7209.JPG" alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7209.JPG')">
+                <p><b>Bow and pearl stone stud earrings </p>₹119 <span style="text-decoration: line-through; color: gray;">₹170</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7229.JPG" alt="Product 5" onclick="openImage('C:\Users\sahas\Downloads\IMG_7229.JPG')">
+                <p><b>Fish Tail Drop earrings </p>₹149 <span style="text-decoration: line-through; color: gray;">₹212</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7348.JPG" alt="Product 6" onclick="openImage('C:\Users\sahas\Downloads\IMG_7348.JPG')">
+                <p><b>Rose Gold Two way Sea Shell </p>₹299 <span style="text-decoration: line-through; color: gray;">₹427</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7231.JPG" alt="Product 7" onclick="openImage('C:\Users\sahas\Downloads\IMG_7231.JPG')">
+                <p><b>Anti-tarnish Pintrest Teddy chain </p>₹399 <span style="text-decoration: line-through; color: gray;">₹484</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7218.JPG" alt="Product 8" onclick="openImage('C:\Users\sahas\Downloads\IMG_7218.JPG')">
+                <p><b>Pintrest Cross bling Pearl rings </p>₹119 <span style="text-decoration: line-through; color: gray;">₹170</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7205.JPG" alt="Product 9" onclick="openImage('C:\Users\sahas\Downloads\IMG_7205.JPG')">
+                <p><b>Butterfly Chain Earings </p>₹179 <span style="text-decoration: line-through; color: gray;">₹255</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7220.JPG" alt="Product 10" onclick="openImage('C:\Users\sahas\Downloads\IMG_7220.JPG')">
+                <p><b>Evil-eye bracelet,Anti-tarnish </p>₹449 <span style="text-decoration: line-through; color: gray;">₹641</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7225.JPG" alt="Product 11" onclick="openImage('C:\Users\sahas\Downloads\IMG_7225.JPG')">
+                <p><b>Anti-tarnish bow chain </p>₹399 <span style="text-decoration: line-through; color: gray;">₹570</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7244.JPG" alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7244.JPG')">
+                <p><b>Anti-tarnish infinity Bracelet </p>₹359 <span style="text-decoration: line-through; color: gray;">₹513</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7236.JPG" alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7236.JPG')">
+                <p><b>Anti-tarnish 11:11 manifestation Chain </p>₹249 <span style="text-decoration: line-through; color: gray;">₹355</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7207-1.JPG" alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7207-1.JPG')">
+                <p><b>Heart pearl drop earings </p>₹129 <span style="text-decoration: line-through; color: gray;">₹184</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7214.JPG"alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7214.JPG')">
+                <p><b>Pintrest Bow stud earrings </p>₹129 <span style="text-decoration: line-through; color: gray;">₹185</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7216.JPG"alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7216.JPG')">
+                <p><b>Pearl Butterfly circle earrings </p>₹149 <span style="text-decoration: line-through; color: gray;">₹212</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7212.JPG" alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7212.JPG')">
+                <p><b>Pintrest Combo earings </p>₹349 <span style="text-decoration: line-through; color: gray;">₹498</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7223.AVIF" alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7223.AVIF')">
+                <p><b>Anti tarnish heart earrings </p>₹279 <span style="text-decoration: line-through; color: gray;">₹398</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7227.JPG"alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7227.JPG')">
+                <p><b>Pintrest stylish Golden rose pearl </p>₹129 <span style="text-decoration: line-through; color: gray;">₹184</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7239.JPG"alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7239.JPG')">
+                <p><b>Butterfly Pearl earring stud </p>₹129 <span style="text-decoration: line-through; color: gray;">₹184</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7233.JPG"alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7233.JPG')">
+                <p><b>11:11 Heart </p>₹279 <span style="text-decoration: line-through; color: gray;">₹398</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7369.JPG" alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7369.JPG')">
+                <p><b>Anti-tarnish heart bracelet </p>₹349 <span style="text-decoration: line-through; color: gray;">₹498</span></b></p>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sahas\Downloads\IMG_7368.JPG" alt="Product 4" onclick="openImage('C:\Users\sahas\Downloads\IMG_7368.JPG')">
+                <p><b>Anti-tarnish Fashion Dolphin pendent</p>₹399 <span style="text-decoration: line-through; color: gray;">₹570</span></b></p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/zirvajewels?igsh=cjZqMGtrb2IzZnI0" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.telegram.com" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://wa.me/9346839087" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="contact">DM US @zirvajewels</p>
+        <p>&copy; 2025 Zirva Jewels. All rights reserved.</p>
+    </footer>
+</body>
+</html>
